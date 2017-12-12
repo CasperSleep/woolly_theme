@@ -50,6 +50,6 @@
 	</div><!-- .site-inner -->
 </div><!-- .site -->
 <?php wp_footer(); ?>
-<!--<script async src="/wp-content/themes/www/public/main.js"></script>-->
+
 </body>
 </html>

@@ -7,7 +7,10 @@
  * @since Twenty Sixteen 1.0
  */
 
-get_header(); ?>
+get_header();
+
+$theme_url = get_template_directory_uri();
+?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
@@ -53,7 +56,7 @@ get_header(); ?>
                 <div class="magazine-wrapper clearfix">
                     <div class="iner">
                         <div class="img-wrapper">
-                            <img src="/wp-content/themes/www/public/Woolly_v.3.jpg">
+                            <img src="<?= $theme_url ?>/public/Woolly_v.3.jpg">
                         </div>
                         <div class="magazine-body">
                             <div class="magazine-title">
@@ -87,7 +90,7 @@ get_header(); ?>
                 <div class="products-wrapper">
                     <div class="product-item">
                         <a href="https://casper.com/mattresses/casper/?utm_source=woolly&utm_medium=internal&utm_term=upper&utm_content=cs_COR" target="_blank">
-                            <img src="/wp-content/themes/www/public/products/casper-gallery-02-mattress-zip.png" alt="" style="margin-bottom: 20px">
+                            <img src="<?= $theme_url ?>/public/products/casper-gallery-02-mattress-zip.png" alt="" style="margin-bottom: 20px">
                             <div class="model">The Casper</div>
                             <div class="dscr">The mattress that made Casper famous for making ridiculously comfortable mattresses.</div>
                         </a>
@@ -96,7 +99,7 @@ get_header(); ?>
 
                     <div class="product-item">
                         <a href="https://casper.com/sheets/?utm_source=woolly&utm_medium=internal&utm_term=upper&utm_content=cs_SHE" target="_blank">
-                            <img src="/wp-content/themes/www/public/products/us-pip-sheets-tile.png" alt="">
+                            <img src="<?= $theme_url ?>/public/products/us-pip-sheets-tile.png" alt="">
                             <div class="model">The Sheets</div>
                             <div class="dscr">
                                 Soft, crisp, airy, smooth and other words to describe really excellent sheets.
@@ -106,7 +109,7 @@ get_header(); ?>
 
                     <div class="product-item">
                         <a href="https://casper.com/pillows/?utm_source=woolly&utm_medium=internal&utm_term=upper&utm_content=cs_PIL" target="_blank">
-                            <img src="/wp-content/themes/www/public/products/us-pip-pillow-tile.png" alt="">
+                            <img src="<?= $theme_url ?>/public/products/us-pip-pillow-tile.png" alt="">
                             <div class="model">The Pillow</div>
                             <div class="dscr">
                                 Your head deserves a supportive, but fluffy, giant marshmallow to dream on.

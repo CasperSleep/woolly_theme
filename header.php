@@ -9,6 +9,7 @@
  * @since Twenty Sixteen 1.0
  */
 
+$theme_url = get_template_directory_uri();
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -19,8 +20,8 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
-    <link rel="shortcut icon" href="/wp-content/themes/www/public/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/wp-content/themes/www/public/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= $theme_url ?>/public/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?= $theme_url ?>/public/favicon.ico" type="image/x-icon">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -79,18 +80,18 @@
 		<header id="masthead" class="site-header" role="banner">
             <div class="site-branding">
                 <a href="<?= $home_url; ?>" id="logo" style="width: 413px;">
-                    <img src="/wp-content/themes/www/public/woolly-logo.png">
+                    <img src="<?= $theme_url ?>/public/woolly-logo.png">
                 </a>
             </div><!-- .site-branding -->
 			<div class="site-header-main">
 
                 <div id="little-logo">
                     <a href="<?= $home_url; ?>">
-                        <img src="/wp-content/themes/www/public/woolly-logo.png" width="100">
+                        <img src="<?= $theme_url ?>/public/woolly-logo.png" width="100">
                     </a>
                 </div>
                 <div id="mobile-menu-icon">
-                    <img src="/wp-content/themes/www/public/menu-lines.png">
+                    <img src="<?= $theme_url ?>/public/menu-lines.png">
                 </div>
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 
@@ -98,11 +99,11 @@
                         <div class="mobile-sidebar-header clearfix">
                             <div class="col-xs-10 padding-0">
                                 <a href="<?= $home_url; ?>">
-                                    <img src="/wp-content/themes/www/public/woolly-logo.png" width="100">
+                                    <img src="<?= $theme_url ?>/public/woolly-logo.png" width="100">
                                 </a>
                             </div>
                             <div class="close-sidebar col-xs-2 padding-0">
-                                <img src="/wp-content/themes/www/public/close-x.png">
+                                <img src="<?= $theme_url ?>/public/close-x.png">
                             </div>
                         </div>
 						<?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -122,8 +123,8 @@
 
         <div class="right-logo">
             <a href="https://casper.com/?utm_source=woolly&utm_medium=internal&utm_term=upper&utm_content=header_c" target="_blank" rel="noreferrer">
-                <img class="white-logo" src="/wp-content/themes/www/public/Casper_icon_blue.png">
-                <img class="blue-logo" src="/wp-content/themes/www/public/woolly-blue-logo.png">
+                <img class="white-logo" src="<?= $theme_url ?>/public/Casper_icon_blue.png">
+                <img class="blue-logo" src="<?= $theme_url ?>/public/woolly-blue-logo.png">
             </a>
         </div>
         <div class="left-blue-line"></div>
