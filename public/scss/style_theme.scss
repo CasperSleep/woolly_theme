@@ -996,6 +996,12 @@ body.author {
 
         a {
           color: #000000;
+
+          &:hover,
+          &:active,
+          &:focus {
+            text-decoration: none;
+          }
         }
       }
       .entry-wrapper {
@@ -1711,8 +1717,10 @@ ul.footer-menu >li >a {
 }
 
 .entry-title a:hover,
-.entry-title a:focus {
+.entry-title a:focus,
+.entry-title a:active {
   color: #007acc;
+  text-decoration: none;
 }
 
 .entry-content {
