@@ -19,7 +19,7 @@ class WOL_Redirects
 
     public function site_redirect()
     {
-        if( is_404() || is_search() || is_date() || is_tag() || is_attachment() || is_tax()
+        if( is_404() || is_search() || is_date() || is_attachment() || is_tax()
             ||  is_post_type_archive() ){
             wp_redirect( home_url(), 302 );
             exit;

@@ -11,8 +11,11 @@
            form_data.append('action', 'ajax_wol_more_stories');
            form_data.append('options[page]', page);
 
-           if($(this).data('cat')) {
-               form_data.append('options[category]', $(this).data('cat'));
+           if($(this).data('tax')) {
+               form_data.append('options[tax]', $(this).data('tax'));
+           }
+           if($(this).data('id')) {
+               form_data.append('options[tid]', $(this).data('id'));
            }
            if($(this).data('auth')) {
                form_data.append('options[author]', $(this).data('auth'));

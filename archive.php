@@ -71,7 +71,7 @@ get_header(); ?>
             $adding_data = '';
             $queried_object = get_queried_object();
             if( $queried_object instanceof  \WP_Term ) :
-                $adding_data = 'data-cat="' . $queried_object->term_id . '"';
+                $adding_data = 'data-tax="' . $queried_object->taxonomy . '" data-id="' . $queried_object->term_id . '"';
             elseif ($queried_object instanceof \WP_User ) :
                 $adding_data = 'data-auth="' . $queried_object->ID . '"';
             endif;

@@ -91,15 +91,25 @@ if ( ! function_exists( 'twentysixteen_entry_taxonomies' ) ) :
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_entry_taxonomies() {
-	$categories_list = get_the_category_list( '||| ' );
-	if( $categories_list ) {
-	    echo '<ul class="post-categories">';
-	    foreach (explode("||| ", $categories_list) as $cat_link) {
-	        printf('<li class="woolly-button">%s</li>', $cat_link);
-//	        echo $cat_link;
+//	$categories_list = get_the_category_list( '||| ' );
+//	if( $categories_list ) {
+//	    echo '<ul class="post-categories">';
+//	    foreach (explode("||| ", $categories_list) as $cat_link) {
+//	        printf('<li class="woolly-button">%s</li>', $cat_link);
+////	        echo $cat_link;
+//        }
+//        echo '</ul>';
+//    }
+
+    $tags_list = get_the_tag_list( '', '||| ' );
+	if ( $tags_list ) {
+        echo '<ul class="post-categories">';
+        foreach (explode("||| ", $tags_list) as $tag_link) {
+            printf('<li class="woolly-button">%s</li>', $tag_link);
         }
         echo '</ul>';
-    }
+	}
+
 //	if ( $categories_list && twentysixteen_categorized_blog() ) {
 //		printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
 //			_x( 'Categories', 'Used before category names.', 'twentysixteen' ),

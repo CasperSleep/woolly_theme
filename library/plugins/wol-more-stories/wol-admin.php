@@ -18,10 +18,15 @@ class WOL_Admin
 
         if (!is_array($options)) {
             //error
+            echo json_encode([
+              'data' => '',
+              'more' => false
+            ]);
+            exit();
         }
 
-        if( isset($options['category']) ) {
-            $options['category'] = intval($options['category']);
+        if( isset($options['tid']) ) {
+            $options['tid'] = intval($options['tid']);
         }
         if (isset($options['author'])) {
             $options['author'] = intval($options['author']);
@@ -29,15 +34,23 @@ class WOL_Admin
         $post__not_in = apply_filters('wol_get_post_not_in_ids', []);
 
         $query = array(
-//            'posts_per_page' => $per_page,
             'paged' => $options['page'],
             'post_type' => 'post',
-//            'orderby' => 'post_date',
             'post_status' => 'publish',
             'post__not_in' => $post__not_in,
-            'cat' => $options['category'] ? $options['category'] : '',
             'author' => $options['author'] ? $options['author'] : '',
         );
+
+        if( isset($options['tax']) && $options['tax'] && $options['tid']) {
+            switch ($options['tax']) {
+                case 'category':
+                    $query['cat'] = $options['tid'] ? $options['tid'] : '';
+                    break;
+                case 'post_tag':
+                    $query['tag_id'] = $options['tid'] ? $options['tid'] : '';
+                    break;
+            }
+        }
 
         wp($query);
 
