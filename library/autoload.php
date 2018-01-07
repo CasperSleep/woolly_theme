@@ -3,7 +3,7 @@
  * @package Theme
  */
 
-define('WOL_VERSION', '1.2');
+define('WOL_VERSION', '1.3');
 
 // PATHS ARE DEFINED
 define('WOL_PLUGIN_PATH', get_template_directory() . '/library/plugins');
